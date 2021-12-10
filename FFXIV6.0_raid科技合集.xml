@@ -1,0 +1,1036 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="432e7cc1-6e51-49f5-8d7c-2722aac68167" Name="FFXIV6.0_raid科技合集(by yoyokity &amp; 牙刷)" Enabled="true">
+    <Folders>
+      <Folder Id="40919f7f-3ddb-49c2-9d3b-6a41a43db88a" Name="极佐迪亚克1.0.6" Enabled="true">
+        <Folders>
+          <Folder Id="ed89bb20-798d-42bd-a425-fc41e6683177" Name="画图(需要Morelog)" Enabled="true">
+            <Folders>
+              <Folder Id="ffc6ab49-59c5-49ff-b8b4-cdb7fb7a812b" Name="秘纹*" Enabled="true">
+                <Folders>
+                  <Folder Id="00e8b00b-17f3-48d4-9d34-dbafd1956b73" Name="方块" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Name="上半场" Id="77a532da-abb2-4551-9b5f-ae4dcc3a97b8" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67E5:[^:]*:[^:]*:[^:]*:[^:]*:100.00:79.00:0.00:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="上半场" AuraImage="https://s2.loli.net/2021/12/08/MvsBtc5hjKU48VH.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="下半场" Id="6499706c-dca6-4955-9507-3e97b13597f4" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67E5:[^:]*:[^:]*:[^:]*:[^:]*:100.00:121.00:0.00:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="下半场" AuraImage="https://s2.loli.net/2021/12/08/MvsBtc5hjKU48VH.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+100" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="右半场" Id="d4ec9323-9698-4784-82a0-d692ac978764" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67E5:[^:]*:[^:]*:[^:]*:[^:]*:121.00:100.00:0.00:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="右半场" AuraImage="https://s2.loli.net/2021/12/08/IrvakB5wpO2zqt4.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+100" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="左半场" Id="5eac87a9-6ad5-4ec8-a2de-6ba91814b093" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67E5:[^:]*:[^:]*:[^:]*:[^:]*:79.00:100.00:0.00:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="左半场" AuraImage="https://s2.loli.net/2021/12/08/IrvakB5wpO2zqt4.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                  <Folder Id="5ffd50d9-d7b6-4d5d-9135-1d11a2dfab76" Name="三角" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Name="上三角" Id="433caf23-c5e6-4fe8-aec2-a08ca10ccd9c" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67E6:[^:]*:[^:]*:[^:]*:[^:]*:100.00:79.00:0.00:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="上三角" AuraImage="https://s2.loli.net/2021/12/08/2iaUPTwW867bx51.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="下三角" Id="3f60370c-0b4c-4f34-8e9e-c2558c822ced" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67E6:[^:]*:[^:]*:[^:]*:[^:]*:100.00:121.00:0.00:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="下三角" AuraImage="https://s2.loli.net/2021/12/08/I7ZCovaPBr4xdJE.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="右三角" Id="dd719305-f515-41fc-b0d1-0247cb99fdb9" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67E6:[^:]*:[^:]*:[^:]*:[^:]*:121.00:100.00:0.00:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="右三角" AuraImage="https://s2.loli.net/2021/12/08/RcPfkKV5veg4CpF.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="左三角" Id="641772c9-636d-4289-ae6e-8dd57c7308f0" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67E6:[^:]*:[^:]*:[^:]*:[^:]*:79.00:100.00:0.00:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="左三角" AuraImage="https://s2.loli.net/2021/12/08/7a4pq6OczXNZ2mY.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="右上三角" Id="412444e3-0ba9-4694-99bb-c4cb9d474ec7" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67E6:[^:]*:[^:]*:[^:]*:[^:]*:114.00:79.00:0.00:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="右上三角" AuraImage="https://s2.loli.net/2021/12/08/2iaUPTwW867bx51.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+50" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="左上三角" Id="f801786a-025a-4452-8a7c-593cf92d3084" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67E6:[^:]*:[^:]*:[^:]*:[^:]*:86.00:79.00:0.00:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="左上三角" AuraImage="https://s2.loli.net/2021/12/08/2iaUPTwW867bx51.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})-50" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                  <Folder Id="8f48811a-1c85-4476-8390-e4763c7eb935" Name="直线" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Name="中直线" Id="fd9749ed-e6ea-4a2c-81b5-a122288306f1" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67E4:[^:]*:[^:]*:[^:]*:[^:]*:100.00:79.00:0.00:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="中直线" AuraImage="https://s2.loli.net/2021/12/08/wJiCPpf43j5NQhb.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+200/3" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="左直线" Id="ed1d44af-53bf-447f-b9ab-a4943baaaa79" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67E4:[^:]*:[^:]*:[^:]*:[^:]*:86.00:79.00:0.00:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="左直线" AuraImage="https://s2.loli.net/2021/12/08/wJiCPpf43j5NQhb.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="右直线" Id="b3049e44-00aa-4a3b-8a5e-25ab9a77b98f" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67E4:[^:]*:[^:]*:[^:]*:[^:]*:114.00:79.00:0.00:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="右直线" AuraImage="https://s2.loli.net/2021/12/08/wJiCPpf43j5NQhb.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+200/3*2" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                  <Folder Id="79df7b24-2fc8-4240-850f-4c06dfcef1d1" Name="显学*" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Source="FFXIVNetwork" Name="1*" Id="0863c86d-2d1c-4368-8e82-3935b3539195" RegularExpression="^03\|[^|]*\|(?&lt;id&gt;[0-9A-F]{8})\|(秘纹|秘紋|Arcane Sigil)\|00\|5A\|0000\|00\|\|10455\|1371(?&lt;type&gt;(2|3))\|">
+                        <Actions>
+                          <Action OrderNumber="1" VariableOp="SetString" VariableName="${id}" VariableExpression="${type}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="下" Id="b037a0f8-edc4-40de-937d-9229bd6de1ed" RegularExpression="^.{15}ChatLog 00:0:105:(?&lt;id&gt;[0-9A-F]{8}):[0-9A-F]{4}:00:00:00:100.00:121.00:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="显学下三角" AuraImage="https://s2.loli.net/2021/12/08/I7ZCovaPBr4xdJE.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:${id}}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="2" AuraName="显学下方块" AuraImage="https://s2.loli.net/2021/12/08/MvsBtc5hjKU48VH.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+100" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:${id}}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                            </Condition>
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="右" Id="f52f3ee3-230b-4e6b-b5c8-aa97346eac4e" RegularExpression="^.{15}ChatLog 00:0:105:(?&lt;id&gt;[0-9A-F]{8}):[0-9A-F]{4}:00:00:00:121.00:100.00:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="显学右三角" AuraImage="https://s2.loli.net/2021/12/08/RcPfkKV5veg4CpF.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:${id}}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="2" AuraName="显学右方块" AuraImage="https://s2.loli.net/2021/12/08/IrvakB5wpO2zqt4.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+100" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:${id}}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                            </Condition>
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="左" Id="994537f0-95e1-4e0e-8540-86196df6accd" RegularExpression="^.{15}ChatLog 00:0:105:(?&lt;id&gt;[0-9A-F]{8}):[0-9A-F]{4}:00:00:00:79.00:100.00:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="显学左三角" AuraImage="https://s2.loli.net/2021/12/08/7a4pq6OczXNZ2mY.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:${id}}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="2" AuraName="显学左方块" AuraImage="https://s2.loli.net/2021/12/08/IrvakB5wpO2zqt4.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:${id}}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                            </Condition>
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                </Folders>
+                <Triggers />
+              </Folder>
+              <Folder Id="157196f7-656e-4738-9bb9-ca8e45218448" Name="BOSS" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Name="左右拳" Id="a97f4965-7512-4a8c-aca9-ffa66a754f5a" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67F1:">
+                    <Actions>
+                      <Action OrderNumber="1" AuraName="左右拳" AuraImage="https://s2.loli.net/2021/12/08/mdIQuMSg2aVfi1X.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="6.6*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="右冲拳" Id="33c23ef9-bba7-4e05-a919-f2a47d62db34" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67ED:">
+                    <Actions>
+                      <Action OrderNumber="1" AuraName="右冲拳" AuraImage="https://s2.loli.net/2021/12/08/pHc5wKj4eTf3WYC.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="左冲拳" Id="a8235e0f-b149-4138-9337-3a8154ad159a" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67EC:">
+                    <Actions>
+                      <Action OrderNumber="1" AuraName="左冲拳" AuraImage="https://s2.loli.net/2021/12/08/nvbGo9KNShRwz2Y.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+              <Folder Id="8e2317b0-e23a-4ddf-bce6-12beeafe0e87" Name="召唤小怪" Enabled="true">
+                <Folders>
+                  <Folder Id="dc575f89-11f6-48cb-88ae-d95416553496" Name="蛇" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Name="左半场" Id="0ed4463e-8553-49b4-8f68-33fe5c2ed23c" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00200010:0000000(F|D):00000000:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="左半场" AuraImage="https://s2.loli.net/2021/12/08/nKB5dCDZtTpWqbl.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraTTLTickExpression="10*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" VariableOp="SetString" VariableName="当前蛇" VariableExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="3" VariableOp="SetString" VariableName="当前蛇" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="25*1000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="右半场" Id="8fe867f3-c1a6-4350-b1ca-2d35c8329a36" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00200010:000000(10|0E):00000000:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="右半场" AuraImage="https://s2.loli.net/2021/12/08/nKB5dCDZtTpWqbl.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+50" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraTTLTickExpression="10*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" VariableOp="SetString" VariableName="当前蛇" VariableExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="3" VariableOp="SetString" VariableName="当前蛇" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="25*1000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="上半场" Id="e1846103-541c-4d9f-9e4c-5c64a84d8f7b" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00200010:0000001(1|3):00000000:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="上半场" AuraImage="https://s2.loli.net/2021/12/08/VfbF2xr5dk4IiST.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraTTLTickExpression="10*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" VariableOp="SetString" VariableName="当前蛇" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="3" VariableOp="SetString" VariableName="当前蛇" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="25*1000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="下半场" Id="c0b1363d-fbcc-4ed4-a064-f4997e913a6b" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00200010:0000001(2|4):00000000:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="下半场" AuraImage="https://s2.loli.net/2021/12/08/VfbF2xr5dk4IiST.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+50" AuraTTLTickExpression="10*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" VariableOp="SetString" VariableName="当前蛇" VariableExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="3" VariableOp="SetString" VariableName="当前蛇" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="25*1000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                  <Folder Id="d9199327-20fe-4f86-8bdf-752cc22c70d1" Name="钢铁月环" Enabled="true">
+                    <Folders>
+                      <Folder Id="efe03c91-0707-42d4-933c-a051204a7bf8" Name="月环" Enabled="true">
+                        <Folders />
+                        <Triggers>
+                          <Trigger Enabled="true" Name="右上月环" Id="a629ff71-e2a0-4f92-a956-12e6a505c15f" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00200010:00000016:00000000:">
+                            <Actions>
+                              <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="右上月环" AuraImage="https://s2.loli.net/2021/12/08/5gNj1OXCPVzqrtJ.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+${var:右上x}" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+${var:右上y}" AuraTTLTickExpression="${var:小怪时间}*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="右下月环" Id="feaa75d9-1b5c-411f-bddd-996bbe8ea5e4" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00200010:00000018:00000000:">
+                            <Actions>
+                              <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="右下月环" AuraImage="https://s2.loli.net/2021/12/08/5gNj1OXCPVzqrtJ.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+${var:右下x}" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+${var:右下y}" AuraTTLTickExpression="${var:小怪时间}*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="左上月环" Id="801ebfc0-c508-48c6-857f-d3d4f10cb9b4" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00200010:00000015:00000000:">
+                            <Actions>
+                              <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="左上月环" AuraImage="https://s2.loli.net/2021/12/08/5gNj1OXCPVzqrtJ.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+${var:左上x}" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+${var:左上y}" AuraTTLTickExpression="${var:小怪时间}*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="左下月环" Id="731e8a27-2b0e-4d5c-bd1e-4b0970cf541b" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00200010:00000017:00000000:">
+                            <Actions>
+                              <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="左下月环" AuraImage="https://s2.loli.net/2021/12/08/5gNj1OXCPVzqrtJ.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+${var:左下x}" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+${var:左下y}" AuraTTLTickExpression="${var:小怪时间}*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                        </Triggers>
+                      </Folder>
+                      <Folder Id="45492148-90d2-475b-8aeb-4acc2be8d5cf" Name="钢铁" Enabled="true">
+                        <Folders />
+                        <Triggers>
+                          <Trigger Enabled="true" Name="右上钢铁" Id="8170e277-3b7a-4bf7-b59f-85814dec6112" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00200010:0000000A:00000000:">
+                            <Actions>
+                              <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="右上钢铁" AuraImage="https://s2.loli.net/2021/12/08/KbjsnpvIOVJq7A4.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+${var:右上x}" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+${var:右上y}" AuraTTLTickExpression="${var:小怪时间}*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="右下钢铁" Id="f622531c-e311-46af-a519-86bf68fb2df7" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00200010:0000000C:00000000:">
+                            <Actions>
+                              <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="右下钢铁" AuraImage="https://s2.loli.net/2021/12/08/KbjsnpvIOVJq7A4.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+${var:右下x}" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+${var:右下y}" AuraTTLTickExpression="${var:小怪时间}*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="左上钢铁" Id="9a16d9fb-3841-4dc8-8393-fa0afba420fd" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00200010:00000009:00000000:">
+                            <Actions>
+                              <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="左上钢铁" AuraImage="https://s2.loli.net/2021/12/08/KbjsnpvIOVJq7A4.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+${var:左上x}" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+${var:左上y}" AuraTTLTickExpression="${var:小怪时间}*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                          <Trigger Enabled="true" Name="左下钢铁" Id="20fe4f98-8bed-44a8-b3dc-7b6657711262" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00200010:0000000B:00000000:">
+                            <Actions>
+                              <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="左下钢铁" AuraImage="https://s2.loli.net/2021/12/08/KbjsnpvIOVJq7A4.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+${var:左下x}" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+${var:左下y}" AuraTTLTickExpression="${var:小怪时间}*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Trigger>
+                        </Triggers>
+                      </Folder>
+                    </Folders>
+                    <Triggers />
+                  </Folder>
+                  <Folder Id="3407b03e-fb15-4fa8-a4ab-7ea3340b6bea" Name="旋转" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Sequential="True" Name="旋转地图（向右）" Id="5acc414d-fd68-4a0e-a217-03d562771ce5" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:6662:">
+                        <Actions>
+                          <Action OrderNumber="1" VariableOp="SetString" VariableName="地图旋转" VariableExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="左上x" VariableExpression="+50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="左上y" VariableExpression="-50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="左下x" VariableExpression="-50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="左下y" VariableExpression="-50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="右上x" VariableExpression="+50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="右上y" VariableExpression="+50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="右下x" VariableExpression="-50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="9" VariableOp="SetNumeric" VariableName="右下y" VariableExpression="+50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="小怪时间" VariableExpression="20" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="11" AuraName="上半场" AuraImage="https://s2.loli.net/2021/12/08/nKB5dCDZtTpWqbl.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+50" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="0ed4463e-8553-49b4-8f68-33fe5c2ed23c" TriggerForce="true" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:当前蛇}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="12" AuraName="下半场" AuraImage="https://s2.loli.net/2021/12/08/nKB5dCDZtTpWqbl.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="8fe867f3-c1a6-4350-b1ca-2d35c8329a36" TriggerForce="true" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:当前蛇}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="13" AuraName="左半场" AuraImage="https://s2.loli.net/2021/12/08/VfbF2xr5dk4IiST.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="c0b1363d-fbcc-4ed4-a064-f4997e913a6b" TriggerForce="true" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:当前蛇}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="14" AuraName="右半场" AuraImage="https://s2.loli.net/2021/12/08/VfbF2xr5dk4IiST.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+50" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="e1846103-541c-4d9f-9e4c-5c64a84d8f7b" TriggerForce="true" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:当前蛇}" ExpressionTypeL="String" ExpressionR="4" ExpressionTypeR="String" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="15" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="d7000194-1b73-410d-8885-04100315f79b" TriggerForce="true" ActionType="Trigger" ExecutionDelayExpression="25*1000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Sequential="True" Name="画图初始化" Id="d7000194-1b73-410d-8885-04100315f79b" RegularExpression="">
+                        <Actions>
+                          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="左上x" VariableExpression="-50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="左上y" VariableExpression="-50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="左下x" VariableExpression="-50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="左下y" VariableExpression="+50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="右上x" VariableExpression="+50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="右上y" VariableExpression="-50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="右下x" VariableExpression="+50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="右下y" VariableExpression="+50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="9" VariableOp="SetNumeric" VariableName="小怪时间" VariableExpression="10" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="蛇时间" VariableExpression="10" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="11" VariableOp="SetString" VariableName="当前蛇" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Sequential="True" Name="旋转地图（向左）" Id="bbfe4de9-ed30-4058-823c-bf1fcbaca639" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:6663:">
+                        <Actions>
+                          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="地图旋转" VariableExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="左上x" VariableExpression="-50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="左上y" VariableExpression="+50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="左下x" VariableExpression="+50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="左下y" VariableExpression="+50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="右上x" VariableExpression="-50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="右上y" VariableExpression="-50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="右下x" VariableExpression="+50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="9" VariableOp="SetNumeric" VariableName="右下y" VariableExpression="-50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="小怪时间" VariableExpression="20" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="11" AuraName="上半场" AuraImage="https://s2.loli.net/2021/12/08/nKB5dCDZtTpWqbl.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="0ed4463e-8553-49b4-8f68-33fe5c2ed23c" TriggerForce="true" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:当前蛇}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="12" AuraName="下半场" AuraImage="https://s2.loli.net/2021/12/08/nKB5dCDZtTpWqbl.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+50" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="8fe867f3-c1a6-4350-b1ca-2d35c8329a36" TriggerForce="true" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:当前蛇}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="13" AuraName="左半场" AuraImage="https://s2.loli.net/2021/12/08/VfbF2xr5dk4IiST.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+50" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="c0b1363d-fbcc-4ed4-a064-f4997e913a6b" TriggerForce="true" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:当前蛇}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="14" AuraName="右半场" AuraImage="https://s2.loli.net/2021/12/08/VfbF2xr5dk4IiST.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYTickExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="e1846103-541c-4d9f-9e4c-5c64a84d8f7b" TriggerForce="true" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:当前蛇}" ExpressionTypeL="String" ExpressionR="4" ExpressionTypeR="String" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="15" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="d7000194-1b73-410d-8885-04100315f79b" TriggerForce="true" ActionType="Trigger" ExecutionDelayExpression="25*1000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                  <Folder Id="f8a62b14-ade2-4397-9ca1-7439a4d52357" Name="火线" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Name="火线2" Id="4d96a112-1c5a-4f0c-8d98-834c6de61e7e" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00400020:[0-9A-F]{6}05:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="火线" AuraImage="https://s2.loli.net/2021/12/09/ARTZQrS8cyEbUev.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:地图旋转}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="2" AuraName="火线" AuraImage="https://s2.loli.net/2021/12/09/a6sZ7nx3KgVIeNT.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:地图旋转}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Name="火线1" Id="f16e75d0-c47f-4194-8ea2-e08caf66f25b" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00020001:[0-9A-F]{6}05:">
+                        <Actions>
+                          <Action OrderNumber="1" AuraName="火线" AuraImage="https://s2.loli.net/2021/12/09/a6sZ7nx3KgVIeNT.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:地图旋转}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="2" AuraName="火线" AuraImage="https://s2.loli.net/2021/12/09/ARTZQrS8cyEbUev.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:地图旋转}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="NumericEqual" />
+                            </Condition>
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                </Folders>
+                <Triggers />
+              </Folder>
+              <Folder Id="dd637688-94d9-412d-9e35-fa30513be3bb" Name="星图" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Sequential="True" Name="星灵吞噬" Id="ab5cfbd8-f270-40d9-b522-78d0527b3389" RegularExpression="(?&lt;timestamp&gt;^.{14}) StartsCasting (?&lt;type&gt;14):(?&lt;sourceId&gt;(?:[^:]*)):(?&lt;source&gt;(?:[^:]*)):67C3:">
+                    <Actions>
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="cishu" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" VariableOp="SetString" VariableName="xingtu" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" VariableName="xingtu" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="20000">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Sequential="True" Name="星图获取" Id="ebae8d0f-2039-4d75-8ff1-049ae5ae10b4" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0:103(?:[^:]*:){3}(?&lt;count&gt;(?:[^:]*)):">
+                    <Actions>
+                      <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="cishu" VariableExpression="${var:cishu}+1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="A→" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" ExecutionDelayExpression="10" Description="D点第一次" DescriptionOverride="True">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${cishu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="3" AuraImageMode="CenterImage" AuraName="星图1" AuraImage="https://s2.loli.net/2021/12/08/zVL3QqdiESowBm9.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="中→" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" ExecutionDelayExpression="10">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:cishu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="00200010" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="4" AuraImageMode="CenterImage" AuraName="星图1" AuraImage="https://s2.loli.net/2021/12/08/zVL3QqdiESowBm9.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+200/3" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="右→" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:cishu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="10000800" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="5" AuraImageMode="CenterImage" AuraName="星图1" AuraImage="https://s2.loli.net/2021/12/08/zVL3QqdiESowBm9.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})-200/3" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="上→" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:cishu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="00800040" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="6" AuraImageMode="CenterImage" AuraName="星图1" AuraImage="https://s2.loli.net/2021/12/08/zVL3QqdiESowBm9.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})-200/3" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="下→" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:cishu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="00020001" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="A→" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" ExecutionDelayExpression="10" Description="C点第二次" DescriptionOverride="True">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${cishu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="8" AuraImageMode="CenterImage" AuraName="星图2" AuraImage="https://s2.loli.net/2021/12/08/vZq6sbtyIMSBV8j.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="中→" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" ExecutionDelayExpression="10">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:cishu}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="00200010" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="9" AuraImageMode="CenterImage" AuraName="星图2" AuraImage="https://s2.loli.net/2021/12/08/vZq6sbtyIMSBV8j.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})-200/3" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="上→" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:cishu}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="10000800" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="10" AuraImageMode="CenterImage" AuraName="星图2" AuraImage="https://s2.loli.net/2021/12/08/vZq6sbtyIMSBV8j.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+200/3" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+200/3" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="左→" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:cishu}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="00800040" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="11" AuraImageMode="CenterImage" AuraName="星图2" AuraImage="https://s2.loli.net/2021/12/08/vZq6sbtyIMSBV8j.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+200/3" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="右→" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:cishu}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="00020001" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="12" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="A→" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" ExecutionDelayExpression="10" Description="D点第三次" DescriptionOverride="True">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${cishu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="13" AuraImageMode="CenterImage" AuraName="星图3" AuraImage="https://s2.loli.net/2021/12/08/f5mkGTZ1LJKlDFt.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="中/右下" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" ExecutionDelayExpression="10">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:cishu}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="00200010" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="14" AuraImageMode="CenterImage" AuraName="星图3-2" AuraImage="https://s2.loli.net/2021/12/08/f5mkGTZ1LJKlDFt.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+200/3" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+200/3" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="中/右下" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:cishu}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="00200010" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="15" AuraImageMode="CenterImage" AuraName="星图3" AuraImage="https://s2.loli.net/2021/12/08/f5mkGTZ1LJKlDFt.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+200/3" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="右/右下" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:cishu}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="10000800" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="16" AuraImageMode="CenterImage" AuraName="星图3-2" AuraImage="https://s2.loli.net/2021/12/08/f5mkGTZ1LJKlDFt.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+200/3" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+200/3" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="右/右下" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:cishu}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="10000800" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="17" AuraImageMode="CenterImage" AuraName="星图3" AuraImage="https://s2.loli.net/2021/12/08/f5mkGTZ1LJKlDFt.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})+200/3" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="200" AuraTTLTickExpression="15*1000-${_sincems}" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="下/右上" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:cishu}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="00800040" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="18" AuraImageMode="CenterImage" AuraName="星图3-2" AuraImage="https://s2.loli.net/2021/12/08/f5mkGTZ1LJKlDFt.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+200/3" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})-200/3" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="200" AuraTTLTickExpression="15*1000-${_sincems}" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="下/右上" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:cishu}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="00800040" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="19" AuraImageMode="CenterImage" AuraName="星图3" AuraImage="https://s2.loli.net/2021/12/08/f5mkGTZ1LJKlDFt.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})+200/3" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="右/上" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:cishu}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="00020001" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="20" AuraImageMode="CenterImage" AuraName="星图3-2" AuraImage="https://s2.loli.net/2021/12/08/f5mkGTZ1LJKlDFt.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})-200/3" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15*1000-${_sincems}" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="右/上" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:cishu}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="00020001" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:xingtu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers>
+              <Trigger Enabled="true" Name="底图" Id="2c423948-0547-46d5-a3fe-88978d8cfa87" RegularExpression="">
+                <Actions>
+                  <Action OrderNumber="1" AuraName="背景" AuraImage="https://s2.loli.net/2021/12/08/pvucYjt1Dh5C4rx.png" AuraXIniExpression="(${var:极佐迪亚克小图位置x}*${_screenwidth})" AuraYIniExpression="(${var:极佐迪亚克小图位置y}*${_screenheight})" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="20acf95a-da39-4cd7-a02e-2ca6e7602502" Name="TTS" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="星图开疾跑*" Id="f9210110-8a72-4a75-a9a0-4f39d4960ae0" RegularExpression="^.{15}ChatLog 00:0044:[^:]*:降り注げ、あの日のように……">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="开疾跑" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="死刑" Id="e92062ab-624f-4899-ab78-f05b241c6d4a" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:6B63:">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="死刑" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="三次黄圈点名" Id="13b659b2-06ed-409d-ad93-007f0405b03d" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67EB:">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="三连黄圈" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="持续掉血AOE" Id="abff4628-d54b-4578-9586-eb36a4456b30" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67F0:">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="持续掉血AOE" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="分摊" Id="27482a62-01e0-4c09-afb5-dfec0d70be97" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67F3:">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="分摊分摊" UseTTSRateExpression="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="全体1血" Id="9a8f2975-dc41-41e7-a3e0-4d709445326e" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:6C60:">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="全体医血" UseTTSRateExpression="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers>
+          <Trigger Enabled="true" Name="极佐迪亚克结束*" Id="019485bf-0d45-4aeb-aa5c-9ae79f9a5634" RegularExpression="^.{15}RemoveCombatant 04:[0-9A-F]{8}:(佐迪亚克|Zodiark|ゾディアーク):00:1:">
+            <Actions>
+              <Action OrderNumber="1" AuraOp="DeactivateAura" AuraName="背景" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="UnsetRegex" VariableName="[0-9A-F]{8}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" VariableOp="UnsetRegex" VariableName="左上" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" VariableOp="UnsetRegex" VariableName="左下" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" VariableOp="UnsetRegex" VariableName="右上" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" VariableOp="UnsetRegex" VariableName="右下" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" VariableName="小怪时间" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" VariableName="蛇时间" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" VariableName="地图旋转" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" VariableName="当前蛇" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" VariableName="cishu" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="显示位置（设置）" Id="2af2400c-5195-4e83-bcea-b06fa9fb3cb9" RegularExpression="\[" PeriodRefire="Deny" RefirePeriodExpression="99999999" EditAutofire="True">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="这你屏幕位置的比例(方便适配各种分辨率屏幕)，最终位置会用： x*你电脑的长边像素，y*你电脑的短边像素" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="极佐迪亚克小图位置x" VariableExpression="1227/1920" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="极佐迪亚克小图位置y" VariableExpression="205/1080" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="极佐迪亚克开始*" Id="2a4d79ca-12ed-4c3d-9662-48545c6be069" RegularExpression="^.{15}AddCombatant 03:[0-9A-F]{8}:(佐迪亚克|Zodiark|ゾディアーク):00:5A:" PeriodRefire="Deny" RefirePeriodExpression="5*1000">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="2af2400c-5195-4e83-bcea-b06fa9fb3cb9" TriggerForce="true" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="d7000194-1b73-410d-8885-04100315f79b" TriggerForce="true" ActionType="Trigger" ExecutionDelayExpression="10">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="2c423948-0547-46d5-a3fe-88978d8cfa87" TriggerForce="true" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="e2b09d91-f20b-4949-b89b-8dbbec1cffbd" Name="极海德林" Enabled="true">
+        <Folders>
+          <Folder Id="4fcf6086-70b8-4283-aec5-0a1ad556e3f9" Name="光浪波" Enabled="true">
+            <Folders>
+              <Folder Id="aa28cfb1-da91-421f-a4f2-074564594ae4" Name="第一次（2个）" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Name="安全点1" Id="279db53f-e746-4d0a-952d-ab2ef52f68a0" RegularExpression="">
+                    <Actions>
+                      <Action OrderNumber="1" UseTTSTextExpression="去左上躲两次" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="光浪波x" ExpressionTypeL="String" ExpressionR="86" ExpressionTypeR="String" ConditionType="ListDoesNotContain" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="2" UseTTSTextExpression="去右上躲两次" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="光浪波x" ExpressionTypeL="String" ExpressionR="114" ExpressionTypeR="String" ConditionType="ListDoesNotContain" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="3" UseTTSTextExpression="分组站位" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="15*1000">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+              <Folder Id="869afec6-a62b-4361-875b-e679b4b3ae22" Name="第二次（3个）" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Name="安全点2" Id="c259caf6-39e0-473c-94ef-b5d1038643a4" RegularExpression="">
+                    <Actions>
+                      <Action OrderNumber="1" UseTTSTextExpression="看图躲光浪" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="2" AuraName="极海德林安全点" AuraImage="D:\FFXIV6.0_raid科技合集\图包\极海德林\第二次光浪1.png" AuraXIniExpression="1047" AuraYIniExpression="209" AuraWIniExpression="266" AuraHIniExpression="257" AuraOIniExpression="100" AuraTTLTickExpression="30*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${lvar:光浪波x[1]}" ExpressionTypeL="String" ExpressionR="86" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="3" AuraName="极海德林安全点" AuraImage="D:\FFXIV6.0_raid科技合集\图包\极海德林\第二次光浪2.png" AuraXIniExpression="1047" AuraYIniExpression="209" AuraWIniExpression="266" AuraHIniExpression="257" AuraOIniExpression="100" AuraTTLTickExpression="30*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${lvar:光浪波x[1]}" ExpressionTypeL="String" ExpressionR="114" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="4" UseTTSTextExpression="躲水晶后" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="22*1000">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+              <Folder Id="7c1a279d-9ffa-46a8-ae1e-b157e5fd8655" Name="第三次及后面（4个）" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Sequential="True" Name="安全点3" Id="fb1a35e9-f7a2-4b62-a21b-7371b3aef748" RegularExpression="">
+                    <Actions>
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="光浪波安全点1" VariableExpression="左" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${lvar:光浪波x}" ExpressionTypeL="String" ExpressionR="86" ExpressionTypeR="String" ConditionType="ListDoesNotContain" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="2" VariableOp="SetString" VariableName="光浪波安全点1" VariableExpression="右" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${lvar:光浪波x}" ExpressionTypeL="String" ExpressionR="114" ExpressionTypeR="String" ConditionType="ListDoesNotContain" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="3" VariableOp="SetString" VariableName="光浪波安全点2" VariableExpression="上" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${lvar:光浪波y}" ExpressionTypeL="String" ExpressionR="86" ExpressionTypeR="String" ConditionType="ListDoesNotContain" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="4" VariableOp="SetString" VariableName="光浪波安全点2" VariableExpression="下" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${lvar:光浪波y}" ExpressionTypeL="String" ExpressionR="114" ExpressionTypeR="String" ConditionType="ListDoesNotContain" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="5" TextAuraEffect="Bold" TextAuraFontSize="26.25" TextAuraForeground="#FF0080" TextAuraName="安全点" TextAuraExpression="安全点：${var:光浪波安全点1}${var:光浪波安全点2}" TextAuraXIniExpression="1194" TextAuraYIniExpression="263" TextAuraWIniExpression="273" TextAuraHIniExpression="102" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" ActionType="TextAura" ExecutionDelayExpression="10">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="6" UseTTSTextExpression="${var:光浪波安全点1}${var:光浪波安全点2} ${var:光浪波安全点1}${var:光浪波安全点2}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers>
+              <Trigger Enabled="true" Sequential="True" Name="光浪波读条" Id="e8c7f9e7-b44d-41e5-8faa-da5e49881140" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:6693:">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="UnsetRegex" ListVariableName="光浪波" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="光浪波次数" VariableExpression="${var:光浪波次数}+1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="5b72599b-d81e-4793-a606-d2a63a0e02ab" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="fb1a35e9-f7a2-4b62-a21b-7371b3aef748" TriggerForce="regexp,refire,parent,active" ActionType="Trigger" ExecutionDelayExpression="5*1000">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:光浪波次数}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="279db53f-e746-4d0a-952d-ab2ef52f68a0" TriggerForce="regexp,refire,parent,active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:光浪波次数}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="6" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="c259caf6-39e0-473c-94ef-b5d1038643a4" TriggerForce="regexp,refire,parent,active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:光浪波次数}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="7" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="5b72599b-d81e-4793-a606-d2a63a0e02ab" ActionType="Trigger" ExecutionDelayExpression="2*1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="光浪波" Id="5b72599b-d81e-4793-a606-d2a63a0e02ab" RegularExpression="^.{15}ChatLog 00:0:105:[0-9A-F]{8}:[0-9A-F]{4}:00:00:00:(?&lt;x&gt;70|86|100|114|130)\.00:(?&lt;y&gt;70|86|100|114|130)\.00:">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="光浪波x" ListVariableExpression="${x}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="光浪波y" ListVariableExpression="${y}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers>
+          <Trigger Enabled="true" Name="极海德林开始" Id="b1ff3923-b8f5-4d6e-92ea-eb8a4841863c" RegularExpression="^.{15}AddCombatant 03:[0-9A-F]{8}:(海德林|ハイデリン|Hydaelyn):00:5A:" PeriodRefire="Deny" RefirePeriodExpression="5*1000">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetString" VariableName="光浪波次数" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers />
+  </ExportedFolder>
+</TriggernometryExport>
