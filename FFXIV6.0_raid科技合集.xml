@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="432e7cc1-6e51-49f5-8d7c-2722aac68167" Name="FFXIV6.0_raid科技合集  (by yoyokity &amp; 牙刷)" Enabled="true">
+  <ExportedFolder Id="432e7cc1-6e51-49f5-8d7c-2722aac68167" Name="FFXIV6.0_raid科技合集  (by yoyokity &amp; 牙刷)   （QQ群：202674763）" Enabled="true">
     <Folders>
       <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="996" Id="e2b09d91-f20b-4949-b89b-8dbbec1cffbd" Name="极海德林1.0.0" Enabled="true">
         <Folders>
@@ -102,7 +102,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="70|130" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="6" AuraName="光浪波范围3" AuraImage="${var:本地包地址}图包\极海德林\光浪2.png" AuraXIniExpression="${tvar:设置[3][1]}+91+68" AuraYIniExpression="${tvar:设置[3][2]}+22" AuraWIniExpression="205" AuraHIniExpression="205" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                  <Action OrderNumber="6" AuraName="光浪波范围3" AuraImage="${var:本地包地址}图包\极海德林\光浪2.png" AuraXIniExpression="${tvar:设置[3][1]}+91+68" AuraYIniExpression="${tvar:设置[3][2]}+22" AuraWIniExpression="205" AuraHIniExpression="205" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Aura">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${var:光浪波次数}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="114" ExpressionTypeR="String" ConditionType="NumericEqual" />
@@ -123,7 +123,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="100" ExpressionTypeR="String" ConditionType="NumericEqual" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="9" AuraName="光浪波范围6" AuraImage="${var:本地包地址}图包\极海德林\光浪.png" AuraXIniExpression="${tvar:设置[3][1]}+22" AuraYIniExpression="${tvar:设置[3][2]}+91+68" AuraWIniExpression="205" AuraHIniExpression="205" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                  <Action OrderNumber="9" AuraName="光浪波范围6" AuraImage="${var:本地包地址}图包\极海德林\光浪.png" AuraXIniExpression="${tvar:设置[3][1]}+22" AuraYIniExpression="${tvar:设置[3][2]}+91+68" AuraWIniExpression="205" AuraHIniExpression="205" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Aura">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${var:光浪波次数}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="130|70" ExpressionTypeR="String" ConditionType="RegexMatch" />
@@ -246,15 +246,12 @@
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="找第三次位置" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" TextAuraAlignment="TopCenter" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="#FF379B" TextAuraName="提示" TextAuraExpression="${numeric:25-${_since}}秒后穿一轮" TextAuraXIniExpression="${tvar:设置[3][1]}" TextAuraYIniExpression="${tvar:设置[3][2]}+250" TextAuraWIniExpression="250" TextAuraHIniExpression="200" TextAuraOIniExpression="100" TextAuraTTLTickExpression="25-${_since}" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" ActionType="TextAura">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" UseTTSTextExpression="穿穿穿" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="23*1000">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
