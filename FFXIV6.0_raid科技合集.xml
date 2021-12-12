@@ -156,7 +156,7 @@
           </Folder>
           <Folder Id="245b9697-e5d6-4b86-b46c-90c1bae257a7" Name="tts" Enabled="true">
             <Folders>
-              <Folder Id="4753b4ab-8d50-49d7-898b-2b4734671d98" Name="月环钢铁十字" Enabled="true">
+              <Folder Id="4753b4ab-8d50-49d7-898b-2b4734671d98" Name="月环钢铁十字" Enabled="false">
                 <Folders />
                 <Triggers>
                   <Trigger Enabled="true" Name="钢铁" Id="fa25df65-8ee0-4601-9f6e-d8bedf99c75b" RegularExpression="^.{15}StatusAdd 1A:B3D:[^:]*:[^:]*:[^:]*::[^:]*:(海德林|ハイデリン|Hydaelyn):">
