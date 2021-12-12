@@ -192,15 +192,12 @@
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="延迟八人分摊" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" TextAuraAlignment="TopCenter" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="#FF379B" TextAuraName="提示" TextAuraExpression="${numeric:16-${_since}}秒后八人分摊" TextAuraXIniExpression="${tvar:设置[3][1]}" TextAuraYIniExpression="${tvar:设置[3][2]}+250" TextAuraWIniExpression="250" TextAuraHIniExpression="200" TextAuraOIniExpression="100" TextAuraTTLTickExpression="16-${_since}" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" ActionType="TextAura">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="3" UseTTSTextExpression="集合分摊" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="13*1000">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -209,15 +206,12 @@
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="延迟双奶分摊" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" TextAuraAlignment="TopCenter" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="#FF379B" TextAuraName="提示" TextAuraExpression="${numeric:16-${_since}}秒后双奶分摊" TextAuraXIniExpression="${tvar:设置[3][1]}" TextAuraYIniExpression="${tvar:设置[3][2]}+250" TextAuraWIniExpression="250" TextAuraHIniExpression="200" TextAuraOIniExpression="100" TextAuraTTLTickExpression="16-${_since}" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" ActionType="TextAura">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="3" UseTTSTextExpression="分摊分摊" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="13*1000">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -226,15 +220,12 @@
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="延迟冰分散" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" TextAuraAlignment="TopCenter" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="#FF379B" TextAuraName="提示" TextAuraExpression="${numeric:16-${_since}}秒后冰分散" TextAuraXIniExpression="${tvar:设置[3][1]}" TextAuraYIniExpression="${tvar:设置[3][2]}+250" TextAuraWIniExpression="250" TextAuraHIniExpression="200" TextAuraOIniExpression="100" TextAuraTTLTickExpression="16-${_since}" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" ActionType="TextAura">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="3" UseTTSTextExpression="散开散开" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="13*1000">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -243,7 +234,6 @@
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="准备双奶分摊" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -256,12 +246,15 @@
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="找第三次位置" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
-                  <Action OrderNumber="2" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="#FF379B" TextAuraName="提示" TextAuraExpression="${numeric:16-${_since}}秒后穿一轮" TextAuraXIniExpression="${tvar:设置[3][1]}" TextAuraYIniExpression="${tvar:设置[3][2]}-30" TextAuraWIniExpression="200" TextAuraHIniExpression="200" TextAuraOIniExpression="100" TextAuraTTLTickExpression="25-${_since}" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" ActionType="TextAura">
+                  <Action OrderNumber="2" TextAuraAlignment="TopCenter" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="#FF379B" TextAuraName="提示" TextAuraExpression="${numeric:25-${_since}}秒后穿一轮" TextAuraXIniExpression="${tvar:设置[3][1]}" TextAuraYIniExpression="${tvar:设置[3][2]}+250" TextAuraWIniExpression="250" TextAuraHIniExpression="200" TextAuraOIniExpression="100" TextAuraTTLTickExpression="25-${_since}" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" ActionType="TextAura">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" UseTTSTextExpression="穿穿穿" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="23*1000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
@@ -380,66 +373,52 @@
             <Actions>
               <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="489f2642-e6ea-47d3-a116-65c4a0ff9f4c" TriggerForce="true" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="2" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="${var:本地包地址}设置.csv" DiskFileOpVar="设置" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile" ExecutionDelayExpression="20" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="如果缺失本地包，将使用github缺省网络包，无法自定义，还有可能连接缓慢" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
-              <Action OrderNumber="4" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="https://gogofishman.github.io/FFXIV6.0RaidTriggernometry/FFXIV6.0_raid科技合集/设置.csv" DiskFileOpVar="设置" VariableOp="SetString" VariableName="本地包地址" VariableExpression="https://gogofishman.github.io/FFXIV6.0RaidTriggernometry/FFXIV6.0_raid科技合集/" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+              <Action OrderNumber="4" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="https://gogofishman.github.io/FFXIV6.0RaidTriggernometry/FFXIV6.0_raid科技合集/设置.csv" DiskFileOpVar="设置" VariableOp="SetString" VariableName="本地包地址" VariableExpression="https://gogofishman.github.io/FFXIV6.0RaidTriggernometry/FFXIV6.0_raid科技合集/" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="20" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${tvar:设置[1][1]}" ExpressionTypeL="String" ExpressionR="通用" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${tvar:设置[1][1]}" ExpressionTypeL="String" ExpressionR="提示窗口" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                 </Condition>
-                <Conditions />
               </Action>
               <Action OrderNumber="5" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="https://gogofishman.github.io/FFXIV6.0RaidTriggernometry/FFXIV6.0_raid科技合集/设置.csv" DiskFileOpVar="设置" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${tvar:设置[1][1]}" ExpressionTypeL="String" ExpressionR="通用" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${tvar:设置[1][1]}" ExpressionTypeL="String" ExpressionR="提示窗口" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                 </Condition>
-                <Conditions />
               </Action>
               <Action OrderNumber="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="配置显示位置" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="${tvar:[3][1]}" VariableExpression="${tvar:[3][1]}*${_screenwidth}" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="设置" TableVariableExpression="${tvar:设置[3][1]}*${_screenwidth}/100" TableVariableX="3" TableVariableY="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="${tvar:[3][1]}" VariableExpression="${tvar:[3][1]}*${_screenwidth}" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="设置" TableVariableExpression="${tvar:设置[3][2]}*${_screenheight}/100" TableVariableX="3" TableVariableY="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="9" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="检测本地包版本" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="10" DiskFileOpName="${var:本地包地址}图包\通用\本地包版本号.txt" DiskFileOpVar="版本号" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="11" DiskFileOpName="https://gogofishman.github.io/FFXIV6.0RaidTriggernometry/FFXIV6.0_raid科技合集/图包/通用/本地包版本号.txt" DiskFileOpVar="最新版本号" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="12" MessageBoxIconType="Warning" MessageBoxText="当前触发器【本地包】版本过低，请更新最新本地包，记得自己备份好“设置.csv”！" TextAuraFontSize="9" TextAuraFontName="宋体" WmsgTitle="123" WmsgCode="123" WmsgWparam="123" WmsgLparam="123" ActionType="MessageBox">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${var:版本号}" ExpressionTypeL="String" ExpressionR="${var:最新版本号}" ExpressionTypeR="String" ConditionType="NumericLess" />
                   <ConditionSingle Enabled="true" ExpressionL="${var:最新版本号}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
                 </Condition>
-                <Conditions />
               </Action>
               <Action OrderNumber="13" VariableName="版本号" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="20">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="14" VariableName="最新版本号" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
