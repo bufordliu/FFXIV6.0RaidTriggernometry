@@ -1,0 +1,878 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="27989b6b-5502-466f-86a9-daddc86796ef" Name="yoyo小工具 1.0.0 （需要开着FFXIV6.0_raid科技合集）" Enabled="true">
+    <Folders>
+      <Folder Id="c7001f09-7a05-44a6-94b9-fe9bb48fd43e" Name="挂机防被踢（非战斗状态下5分钟摁一次空格）" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="挂机防被踢（非战斗状态下5分钟摁一次空格）" Id="b602cc91-0d72-4071-a73a-cda62aacf6f4" RegularExpression="\[" PeriodRefire="Deny" RefirePeriodExpression="99999999">
+            <Actions>
+              <Action OrderNumber="1" LogMessageText="guajiguajiguajiguaji" LogProcess="True" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="b602cc91-0d72-4071-a73a-cda62aacf6f4" TriggerForce="regexp,refire,parent,active" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="空格" Id="ca58ac37-c16a-401e-9899-a4dc330d4756" RegularExpression="^guajiguajiguajiguaji$">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="32" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_incombat}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" LogMessageText="guajiguajiguajiguaji" LogProcess="True" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="b602cc91-0d72-4071-a73a-cda62aacf6f4" TriggerForce="regexp,refire,parent,active" ActionType="LogMessage" ExecutionDelayExpression="5*60*1000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="2b064229-a660-4820-85f7-83d174762da3" Name="团辅监控（需鲶鱼精）" Enabled="true">
+        <Folders>
+          <Folder Id="53292042-ecf7-418d-8d76-409d04226226" Name="小队列表初始化" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="1写入列表" Id="ba4a827a-a206-4aab-87ff-ce7d268cfd25" RegularExpression="任务开始|の攻略を開始した|has begun" PeriodRefire="Deny" RefirePeriodExpression="100">
+                <Actions>
+                  <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/e ListUpadata:&lt;1&gt;:&lt;2&gt;:&lt;3&gt;:&lt;4&gt;:&lt;5&gt;:&lt;6&gt;:&lt;7&gt;:&lt;8&gt;:" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="2000">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Sequential="True" Name="2读取列表" Id="6c054013-5155-40a5-a674-82a7215bd868" RegularExpression="^.{15}ChatLog 00:0038::ListUpadata:(?&lt;list1&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list2&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list3&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list4&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list5&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list6&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list7&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list8&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetString" VariableName="name" VariableExpression="$1:$2:$3:$4:$5:$6:$7:$8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" ListVariableOp="Split" ListVariableName="name" ListVariableExpression=":" ListVariableTarget="playerlist" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" VariableName="name" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Asynchronous="False" Description="职业初始化" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" ListVariableName="playerlist_job" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[1]}].job}" ListVariableIndex="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="7" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[2]}].job}" ListVariableIndex="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="8" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[3]}].job}" ListVariableIndex="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="9" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[4]}].job}" ListVariableIndex="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="10" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[5]}].job}" ListVariableIndex="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="11" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[6]}].job}" ListVariableIndex="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="12" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[7]}].job}" ListVariableIndex="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="13" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[8]}].job}" ListVariableIndex="8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="14" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="重置图片" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="15" AuraOp="DeactivateAuraRegex" AuraName="团辅.{2}[1-8]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="16" AuraOp="DeactivateAuraRegex" AuraName="团辅[1-8]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="17" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="团辅.{2}[1-8]" TextAuraFontName="宋体" ActionType="TextAura">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="18" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="f59883dc-6a0d-48bf-85d4-11222472651d" TriggerForce="regexp,refire,parent,active" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="3重置图片" Id="f59883dc-6a0d-48bf-85d4-11222472651d" RegularExpression="">
+                <Actions>
+                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="团辅1" AuraImage="${var:本地包地址}图包\团辅\${lvar:playerlist_job[1]}.png" AuraXIniExpression="${tvar:设置[3][4]}-33" AuraYIniExpression="${tvar:设置[3][5]}+14" AuraWIniExpression="30" AuraHIniExpression="30" AuraOIniExpression="100" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:playerlist[1]}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" AuraImageMode="Zoom" AuraName="团辅2" AuraImage="${var:本地包地址}图包\团辅\${lvar:playerlist_job[2]}.png" AuraXIniExpression="${tvar:设置[3][4]}-33" AuraYIniExpression="${tvar:设置[3][5]}+14+40" AuraWIniExpression="30" AuraHIniExpression="30" AuraOIniExpression="100" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:playerlist[2]}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" AuraImageMode="Zoom" AuraName="团辅3" AuraImage="${var:本地包地址}图包\团辅\${lvar:playerlist_job[3]}.png" AuraXIniExpression="${tvar:设置[3][4]}-33" AuraYIniExpression="${tvar:设置[3][5]}+14+40*2" AuraWIniExpression="30" AuraHIniExpression="30" AuraOIniExpression="100" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:playerlist[3]}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" AuraImageMode="Zoom" AuraName="团辅4" AuraImage="${var:本地包地址}图包\团辅\${lvar:playerlist_job[4]}.png" AuraXIniExpression="${tvar:设置[3][4]}-33" AuraYIniExpression="${tvar:设置[3][5]}+14+40*3" AuraWIniExpression="30" AuraHIniExpression="30" AuraOIniExpression="100" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:playerlist[4]}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" AuraImageMode="Zoom" AuraName="团辅5" AuraImage="${var:本地包地址}图包\团辅\${lvar:playerlist_job[5]}.png" AuraXIniExpression="${tvar:设置[3][4]}-33" AuraYIniExpression="${tvar:设置[3][5]}+14+40*4" AuraWIniExpression="30" AuraHIniExpression="30" AuraOIniExpression="100" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:playerlist[5]}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="6" AuraImageMode="Zoom" AuraName="团辅6" AuraImage="${var:本地包地址}图包\团辅\${lvar:playerlist_job[6]}.png" AuraXIniExpression="${tvar:设置[3][4]}-33" AuraYIniExpression="${tvar:设置[3][5]}+14+40*5" AuraWIniExpression="30" AuraHIniExpression="30" AuraOIniExpression="100" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:playerlist[6]}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="7" AuraImageMode="Zoom" AuraName="团辅7" AuraImage="${var:本地包地址}图包\团辅\${lvar:playerlist_job[7]}.png" AuraXIniExpression="${tvar:设置[3][4]}-33" AuraYIniExpression="${tvar:设置[3][5]}+14+40*6" AuraWIniExpression="30" AuraHIniExpression="30" AuraOIniExpression="100" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:playerlist[7]}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="8" AuraImageMode="Zoom" AuraName="团辅8" AuraImage="${var:本地包地址}图包\团辅\${lvar:playerlist_job[8]}.png" AuraXIniExpression="${tvar:设置[3][4]}-33" AuraYIniExpression="${tvar:设置[3][5]}+14+40*7" AuraWIniExpression="30" AuraHIniExpression="30" AuraOIniExpression="100" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${lvar:playerlist[8]}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="清除" Id="d41c22d2-92d7-4d09-9908-8d46c792c5d8" RegularExpression="任务结束了|の攻略を終了した|has ended">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="UnsetRegex" ListVariableName="playerlist" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" AuraOp="DeactivateAuraRegex" AuraName="团辅.{2}[1-8]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" AuraOp="DeactivateAuraRegex" AuraName="团辅[1-8]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="团辅.{2}[1-8]" TextAuraFontName="宋体" ActionType="TextAura">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="团灭" Id="71118fb3-b743-4137-9845-44a96551ed4b" RegularExpression=" 21:.{8}:4000001[026]">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="ba4a827a-a206-4aab-87ff-ce7d268cfd25" TriggerForce="true" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="6ea75f38-cb87-4b92-9c08-ff358b6ca37e" Name="动画" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Sequential="True" Name="团辅监控动画" Id="33cd402d-4bd9-4ccf-9c60-134c15ecb568" RegularExpression="^团辅监控动画:(?&lt;list&gt;[1-8]):(?&lt;time&gt;[0-9]*):(?&lt;cd&gt;[0-9]*)">
+                <Actions>
+                  <Action OrderNumber="1" AuraImageMode="Zoom" AuraName="团辅开启${list}" AuraImage="${var:本地包地址}图包\团辅\开启.gif" AuraXIniExpression="${tvar:设置[3][4]}-33-3" AuraYIniExpression="${tvar:设置[3][5]}+14-3+40*(${list}-1)" AuraWIniExpression="36" AuraHIniExpression="36" AuraOIniExpression="100" AuraTTLTickExpression="${time}-${_since}-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" TextAuraAlignment="BottomRight" TextAuraEffect="Bold" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="#FF8040" TextAuraName="团辅开启${list}" TextAuraExpression="${numeric:${time}-${_since}}" TextAuraXIniExpression="${tvar:设置[3][4]}-27" TextAuraYIniExpression="${tvar:设置[3][5]}+22+40*(${list}-1)" TextAuraWIniExpression="30" TextAuraHIniExpression="30" TextAuraOIniExpression="100" TextAuraTTLTickExpression="${time}-${_since}-1" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" ActionType="TextAura">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="进入冷却" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="9" TextAuraBackground="Black" TextAuraOutline="Black" TextAuraName="团辅黑块${list}" TextAuraXIniExpression="${tvar:设置[3][4]}-33" TextAuraYIniExpression="${tvar:设置[3][5]}+14+40*(${list}-1)" TextAuraWIniExpression="30" TextAuraHIniExpression="30" TextAuraOIniExpression="50" TextAuraTTLTickExpression="${cd}-${_since}-1" TextAuraUseOutline="True" TextAuraFontName="宋体" ActionType="TextAura" ExecutionDelayExpression="${time}*1000" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="5" TextAuraAlignment="BottomLeft" TextAuraFontSize="12" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="团辅冷却${list}" TextAuraExpression="${numeric:${cd}-${_since}}" TextAuraXIniExpression="${tvar:设置[3][4]}-35" TextAuraYIniExpression="${tvar:设置[3][5]}+20+40*(${list}-1)" TextAuraWIniExpression="30" TextAuraHIniExpression="30" TextAuraOIniExpression="90" TextAuraTTLTickExpression="${cd}-${_since}-1" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" ActionType="TextAura">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers>
+          <Trigger Enabled="true" Sequential="True" Name="镰刀" Id="698391d4-b25c-4227-8816-41c95b282a33" RegularExpression="^.{15}AOEActionEffect 16:[0-9A-F]{8}:(?&lt;name&gt;.*):5F55:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetString" VariableName="${name}" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[1]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="${name}" VariableExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[2]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetString" VariableName="${name}" VariableExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[3]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetString" VariableName="${name}" VariableExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[4]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetString" VariableName="${name}" VariableExpression="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[5]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" VariableOp="SetString" VariableName="${name}" VariableExpression="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[6]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" VariableOp="SetString" VariableName="${name}" VariableExpression="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[7]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" VariableOp="SetString" VariableName="${name}" VariableExpression="8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[8]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="33cd402d-4bd9-4ccf-9c60-134c15ecb568" TriggerText="团辅监控动画:${var:${name}}:20:120" ActionType="Trigger" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" VariableName="${name}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="playerlist" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="ListContains" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="占星" Id="c138e8b8-eb8c-47b6-8a34-e84a82cf287e" RegularExpression="^.{15}AOEActionEffect 16:[0-9A-F]{8}:(?&lt;name&gt;.*):40A8:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetString" VariableName="${name}" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[1]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="${name}" VariableExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[2]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetString" VariableName="${name}" VariableExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[3]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetString" VariableName="${name}" VariableExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[4]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetString" VariableName="${name}" VariableExpression="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[5]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" VariableOp="SetString" VariableName="${name}" VariableExpression="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[6]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" VariableOp="SetString" VariableName="${name}" VariableExpression="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[7]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" VariableOp="SetString" VariableName="${name}" VariableExpression="8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[8]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="宝石兽施法延迟" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="33cd402d-4bd9-4ccf-9c60-134c15ecb568" TriggerText="团辅监控动画:${var:${name}}:15:120" ActionType="Trigger" ExecutionDelayExpression="600" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" VariableName="${name}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="playerlist" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="ListContains" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="舞娘" Id="3f37eac8-3eea-4a92-9a2c-024c2600516d" RegularExpression="^.{15}AOEActionEffect 16:[0-9A-F]{8}:(?&lt;name&gt;.*):3F44:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetString" VariableName="${name}" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[1]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="${name}" VariableExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[2]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetString" VariableName="${name}" VariableExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[3]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetString" VariableName="${name}" VariableExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[4]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetString" VariableName="${name}" VariableExpression="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[5]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" VariableOp="SetString" VariableName="${name}" VariableExpression="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[6]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" VariableOp="SetString" VariableName="${name}" VariableExpression="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[7]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" VariableOp="SetString" VariableName="${name}" VariableExpression="8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[8]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="33cd402d-4bd9-4ccf-9c60-134c15ecb568" TriggerText="团辅监控动画:${var:${name}}:20:120" ActionType="Trigger" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" VariableName="${name}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="playerlist" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="ListContains" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="忍者" Id="5f11c3d8-5617-40fe-bdbe-d449e673602b" RegularExpression="^.{15}ActionEffect 15:[0-9A-F]{8}:(?&lt;name&gt;.*):8D2:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetString" VariableName="${name}" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[1]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="${name}" VariableExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[2]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetString" VariableName="${name}" VariableExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[3]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetString" VariableName="${name}" VariableExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[4]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetString" VariableName="${name}" VariableExpression="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[5]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" VariableOp="SetString" VariableName="${name}" VariableExpression="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[6]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" VariableOp="SetString" VariableName="${name}" VariableExpression="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[7]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" VariableOp="SetString" VariableName="${name}" VariableExpression="8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[8]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="33cd402d-4bd9-4ccf-9c60-134c15ecb568" TriggerText="团辅监控动画:${var:${name}}:15:60" ActionType="Trigger" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" VariableName="${name}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="playerlist" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="ListContains" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="召唤" Id="edb049c0-c5de-4b66-b29a-46b364f66e5f" RegularExpression="^.{15}AOEActionEffect 16:[0-9A-F]{8}:(?&lt;name&gt;.*):64C9:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetString" VariableName="${name}" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[1]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="${name}" VariableExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[2]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetString" VariableName="${name}" VariableExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[3]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetString" VariableName="${name}" VariableExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[4]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetString" VariableName="${name}" VariableExpression="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[5]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" VariableOp="SetString" VariableName="${name}" VariableExpression="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[6]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" VariableOp="SetString" VariableName="${name}" VariableExpression="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[7]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" VariableOp="SetString" VariableName="${name}" VariableExpression="8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[8]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="宝石兽施法延迟" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="33cd402d-4bd9-4ccf-9c60-134c15ecb568" TriggerText="团辅监控动画:${var:${name}}:30:120" ActionType="Trigger" ExecutionDelayExpression="600" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" VariableName="${name}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="playerlist" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="ListContains" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="诗人" Id="cf78fe17-1f7c-4207-850c-11c5857445f1" RegularExpression="^.{15}AOEActionEffect 16:[0-9A-F]{8}:(?&lt;name&gt;.*):76:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetString" VariableName="${name}" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[1]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="${name}" VariableExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[2]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetString" VariableName="${name}" VariableExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[3]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetString" VariableName="${name}" VariableExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[4]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetString" VariableName="${name}" VariableExpression="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[5]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" VariableOp="SetString" VariableName="${name}" VariableExpression="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[6]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" VariableOp="SetString" VariableName="${name}" VariableExpression="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[7]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" VariableOp="SetString" VariableName="${name}" VariableExpression="8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[8]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="宝石兽施法延迟" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="33cd402d-4bd9-4ccf-9c60-134c15ecb568" TriggerText="团辅监控动画:${var:${name}}:15:120" ActionType="Trigger" ExecutionDelayExpression="600" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" VariableName="${name}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="playerlist" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="ListContains" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="武僧" Id="c58065d3-1d93-456e-8bc4-dd68fb1a9f5a" RegularExpression="^.{15}AOEActionEffect 16:[0-9A-F]{8}:(?&lt;name&gt;.*):1CE4:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetString" VariableName="${name}" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[1]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="${name}" VariableExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[2]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetString" VariableName="${name}" VariableExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[3]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetString" VariableName="${name}" VariableExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[4]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetString" VariableName="${name}" VariableExpression="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[5]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" VariableOp="SetString" VariableName="${name}" VariableExpression="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[6]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" VariableOp="SetString" VariableName="${name}" VariableExpression="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[7]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" VariableOp="SetString" VariableName="${name}" VariableExpression="8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[8]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="宝石兽施法延迟" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="33cd402d-4bd9-4ccf-9c60-134c15ecb568" TriggerText="团辅监控动画:${var:${name}}:15:120" ActionType="Trigger" ExecutionDelayExpression="600" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" VariableName="${name}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="playerlist" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="ListContains" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="学者" Id="30f807a7-50d4-467b-8c91-8e0f062869f4" RegularExpression="^.{15}ActionEffect 15:[0-9A-F]{8}:(?&lt;name&gt;.*):1D0C:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetString" VariableName="${name}" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[1]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="${name}" VariableExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[2]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetString" VariableName="${name}" VariableExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[3]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetString" VariableName="${name}" VariableExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[4]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetString" VariableName="${name}" VariableExpression="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[5]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" VariableOp="SetString" VariableName="${name}" VariableExpression="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[6]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" VariableOp="SetString" VariableName="${name}" VariableExpression="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[7]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" VariableOp="SetString" VariableName="${name}" VariableExpression="8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[8]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="宝石兽施法延迟" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="33cd402d-4bd9-4ccf-9c60-134c15ecb568" TriggerText="团辅监控动画:${var:${name}}:15:120" ActionType="Trigger" ExecutionDelayExpression="600" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" VariableName="${name}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="playerlist" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="ListContains" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="龙骑" Id="ab7f67b2-641e-41ec-998b-e00bf232ac2d" RegularExpression="^.{15}AOEActionEffect 16:[0-9A-F]{8}:(?&lt;name&gt;.*):DE5:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetString" VariableName="${name}" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[1]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="${name}" VariableExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[2]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetString" VariableName="${name}" VariableExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[3]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetString" VariableName="${name}" VariableExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[4]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetString" VariableName="${name}" VariableExpression="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[5]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" VariableOp="SetString" VariableName="${name}" VariableExpression="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[6]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" VariableOp="SetString" VariableName="${name}" VariableExpression="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[7]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" VariableOp="SetString" VariableName="${name}" VariableExpression="8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[8]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="宝石兽施法延迟" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="33cd402d-4bd9-4ccf-9c60-134c15ecb568" TriggerText="团辅监控动画:${var:${name}}:15:120" ActionType="Trigger" ExecutionDelayExpression="600" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" VariableName="${name}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="playerlist" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="ListContains" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="赤魔" Id="64960f56-f6a2-4e5f-bbb3-beb346933488" RegularExpression="^.{15}AOEActionEffect 16:[0-9A-F]{8}:(?&lt;name&gt;.*):1D60:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetString" VariableName="${name}" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[1]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="${name}" VariableExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[2]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetString" VariableName="${name}" VariableExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[3]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetString" VariableName="${name}" VariableExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[4]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetString" VariableName="${name}" VariableExpression="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[5]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" VariableOp="SetString" VariableName="${name}" VariableExpression="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[6]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" VariableOp="SetString" VariableName="${name}" VariableExpression="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[7]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" VariableOp="SetString" VariableName="${name}" VariableExpression="8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${lvar:playerlist[8]}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="33cd402d-4bd9-4ccf-9c60-134c15ecb568" TriggerText="团辅监控动画:${var:${name}}:20:120" ActionType="Trigger" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" VariableName="${name}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="playerlist" ExpressionTypeL="String" ExpressionR="${name}" ExpressionTypeR="String" ConditionType="ListContains" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers />
+  </ExportedFolder>
+</TriggernometryExport>
