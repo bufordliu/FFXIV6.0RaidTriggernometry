@@ -518,7 +518,7 @@
                       <Folder Id="16ce299d-8dfa-47f1-afc1-ab2896273627" Name="显学" Enabled="true">
                         <Folders />
                         <Triggers>
-                          <Trigger Enabled="true" Source="ACT" Name="获取秘纹" Id="8a703813-d6e7-4dd4-8b95-4faa611ab22b" RegularExpression="^.{15}AddCombatant 03:(?&lt;id&gt;[0-9A-F]{8}):(秘纹|秘紋|Arcane Sigil):00:5A:0000:00::10455:1371(?&lt;type&gt;(2|3)):">
+                          <Trigger Enabled="true" Name="获取秘纹" Id="8a703813-d6e7-4dd4-8b95-4faa611ab22b" RegularExpression="^.{15}AddCombatant 03:(?&lt;id&gt;[0-9A-F]{8}):(秘纹|秘紋|Arcane Sigil):00:5A:0000:00::10455:1371(?&lt;type&gt;(2|3)):">
                             <Actions>
                               <Action OrderNumber="1" VariableOp="SetString" VariableName="${id}" VariableExpression="${type}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                                 <Condition Enabled="false" Grouping="Or" />
