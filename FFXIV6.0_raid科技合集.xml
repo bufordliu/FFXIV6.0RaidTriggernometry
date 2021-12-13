@@ -79,14 +79,17 @@
                 <Actions>
                   <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="光浪波x" ListVariableExpression="${x}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="光浪波y" ListVariableExpression="${y}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" AuraName="极海德林背景图" AuraImage="${var:本地包地址}图包\极海德林\地图.png" AuraXIniExpression="${tvar:设置[3][1]}" AuraYIniExpression="${tvar:设置[3][2]}" AuraWIniExpression="250" AuraHIniExpression="250" AuraOIniExpression="100" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:光浪波次数}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="4" AuraName="光浪波范围2" AuraImage="${var:本地包地址}图包\极海德林\光浪2.png" AuraXIniExpression="${tvar:设置[3][1]}+91" AuraYIniExpression="${tvar:设置[3][2]}+22" AuraWIniExpression="205" AuraHIniExpression="205" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" ExecutionDelayExpression="10">
                     <Condition Enabled="true" Grouping="And">
@@ -94,6 +97,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="100" ExpressionTypeR="String" ConditionType="NumericEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="70|130" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="5" AuraName="光浪波范围1" AuraImage="${var:本地包地址}图包\极海德林\光浪2.png" AuraXIniExpression="${tvar:设置[3][1]}+91-68" AuraYIniExpression="${tvar:设置[3][2]}+22" AuraWIniExpression="205" AuraHIniExpression="205" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
                     <Condition Enabled="true" Grouping="And">
@@ -101,13 +105,15 @@
                       <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="86" ExpressionTypeR="String" ConditionType="NumericEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="70|130" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
+                    <Conditions />
                   </Action>
-                  <Action OrderNumber="6" AuraName="光浪波范围3" AuraImage="${var:本地包地址}图包\极海德林\光浪2.png" AuraXIniExpression="${tvar:设置[3][1]}+91+68" AuraYIniExpression="${tvar:设置[3][2]}+22" AuraWIniExpression="205" AuraHIniExpression="205" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Aura">
+                  <Action OrderNumber="6" AuraName="光浪波范围3" AuraImage="${var:本地包地址}图包\极海德林\光浪2.png" AuraXIniExpression="${tvar:设置[3][1]}+91+68" AuraYIniExpression="${tvar:设置[3][2]}+22" AuraWIniExpression="205" AuraHIniExpression="205" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${var:光浪波次数}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="114" ExpressionTypeR="String" ConditionType="NumericEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="70|130" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="7" AuraName="光浪波范围4" AuraImage="${var:本地包地址}图包\极海德林\光浪.png" AuraXIniExpression="${tvar:设置[3][1]}+22" AuraYIniExpression="${tvar:设置[3][2]}+91-68" AuraWIniExpression="205" AuraHIniExpression="205" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
                     <Condition Enabled="true" Grouping="And">
@@ -115,6 +121,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="130|70" ExpressionTypeR="String" ConditionType="RegexMatch" />
                       <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="86" ExpressionTypeR="String" ConditionType="NumericEqual" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="8" AuraName="光浪波范围5" AuraImage="${var:本地包地址}图包\极海德林\光浪.png" AuraXIniExpression="${tvar:设置[3][1]}+22" AuraYIniExpression="${tvar:设置[3][2]}+91" AuraWIniExpression="205" AuraHIniExpression="205" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
                     <Condition Enabled="true" Grouping="And">
@@ -122,13 +129,15 @@
                       <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="130|70" ExpressionTypeR="String" ConditionType="RegexMatch" />
                       <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="100" ExpressionTypeR="String" ConditionType="NumericEqual" />
                     </Condition>
+                    <Conditions />
                   </Action>
-                  <Action OrderNumber="9" AuraName="光浪波范围6" AuraImage="${var:本地包地址}图包\极海德林\光浪.png" AuraXIniExpression="${tvar:设置[3][1]}+22" AuraYIniExpression="${tvar:设置[3][2]}+91+68" AuraWIniExpression="205" AuraHIniExpression="205" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="Aura">
+                  <Action OrderNumber="9" AuraName="光浪波范围6" AuraImage="${var:本地包地址}图包\极海德林\光浪.png" AuraXIniExpression="${tvar:设置[3][1]}+22" AuraYIniExpression="${tvar:设置[3][2]}+91+68" AuraWIniExpression="205" AuraHIniExpression="205" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${var:光浪波次数}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${x}" ExpressionTypeL="String" ExpressionR="130|70" ExpressionTypeR="String" ConditionType="RegexMatch" />
                       <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="String" ExpressionR="114" ExpressionTypeR="String" ConditionType="NumericEqual" />
                     </Condition>
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="Not">
@@ -156,7 +165,7 @@
           </Folder>
           <Folder Id="245b9697-e5d6-4b86-b46c-90c1bae257a7" Name="tts" Enabled="true">
             <Folders>
-              <Folder Id="4753b4ab-8d50-49d7-898b-2b4734671d98" Name="月环钢铁十字" Enabled="false">
+              <Folder Id="4753b4ab-8d50-49d7-898b-2b4734671d98" Name="月环钢铁十字" Enabled="true">
                 <Folders />
                 <Triggers>
                   <Trigger Enabled="true" Name="钢铁" Id="fa25df65-8ee0-4601-9f6e-d8bedf99c75b" RegularExpression="^.{15}StatusAdd 1A:B3D:[^:]*:[^:]*:[^:]*::[^:]*:(海德林|ハイデリン|Hydaelyn):">
@@ -370,66 +379,52 @@
             <Actions>
               <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="489f2642-e6ea-47d3-a116-65c4a0ff9f4c" TriggerForce="true" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="2" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="${var:本地包地址}设置.csv" DiskFileOpVar="设置" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile" ExecutionDelayExpression="20" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="如果缺失本地包，将使用github缺省网络包，无法自定义，还有可能连接缓慢" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="4" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="https://gogofishman.github.io/FFXIV6.0RaidTriggernometry/FFXIV6.0_raid科技合集/设置.csv" DiskFileOpVar="设置" VariableOp="SetString" VariableName="本地包地址" VariableExpression="https://cdn.jsdelivr.net/gh/gogofishman/FFXIV6.0RaidTriggernometry@main/FFXIV6.0_raid%E7%A7%91%E6%8A%80%E5%90%88%E9%9B%86/" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="20" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${tvar:设置[1][1]}" ExpressionTypeL="String" ExpressionR="提示窗口" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                 </Condition>
-                <Conditions />
               </Action>
               <Action OrderNumber="5" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="https://cdn.jsdelivr.net/gh/gogofishman/FFXIV6.0RaidTriggernometry@main/FFXIV6.0_raid%E7%A7%91%E6%8A%80%E5%90%88%E9%9B%86/%E8%AE%BE%E7%BD%AE.csv" DiskFileOpVar="设置" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile" Asynchronous="False">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${tvar:设置[1][1]}" ExpressionTypeL="String" ExpressionR="提示窗口" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                 </Condition>
-                <Conditions />
               </Action>
               <Action OrderNumber="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="配置显示位置" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="${tvar:[3][1]}" VariableExpression="${tvar:[3][1]}*${_screenwidth}" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="设置" TableVariableExpression="${tvar:设置[3][1]}*${_screenwidth}/100" TableVariableX="3" TableVariableY="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="${tvar:[3][1]}" VariableExpression="${tvar:[3][1]}*${_screenwidth}" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="设置" TableVariableExpression="${tvar:设置[3][2]}*${_screenheight}/100" TableVariableX="3" TableVariableY="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="9" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="检测本地包版本" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="10" DiskFileOpName="${var:本地包地址}图包\通用\本地包版本号.txt" DiskFileOpVar="版本号" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="11" DiskFileOpName="https://cdn.jsdelivr.net/gh/gogofishman/FFXIV6.0RaidTriggernometry@main/FFXIV6.0_raid%E7%A7%91%E6%8A%80%E5%90%88%E9%9B%86/图包/通用/本地包版本号.txt" DiskFileOpVar="最新版本号" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="12" MessageBoxIconType="Warning" MessageBoxText="当前触发器【本地包】版本过低，请更新最新本地包，记得自己备份好“设置.csv”！" TextAuraFontSize="9" TextAuraFontName="宋体" WmsgTitle="123" WmsgCode="123" WmsgWparam="123" WmsgLparam="123" ActionType="MessageBox">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${var:版本号}" ExpressionTypeL="String" ExpressionR="${var:最新版本号}" ExpressionTypeR="String" ConditionType="NumericLess" />
                   <ConditionSingle Enabled="true" ExpressionL="${var:最新版本号}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
                 </Condition>
-                <Conditions />
               </Action>
               <Action OrderNumber="13" VariableName="版本号" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="20">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="14" VariableName="最新版本号" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
