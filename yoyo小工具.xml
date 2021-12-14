@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="27989b6b-5502-466f-86a9-daddc86796ef" Name="yoyo小工具 1.0.1 （需要开着FFXIV6.0_raid科技合集）" Enabled="true">
+  <ExportedFolder Id="27989b6b-5502-466f-86a9-daddc86796ef" Name="yoyo小工具 1.0.2 （需要开着FFXIV6.0_raid科技合集）" Enabled="true">
     <Folders>
       <Folder Id="c7001f09-7a05-44a6-94b9-fe9bb48fd43e" Name="挂机防被踢（非战斗状态下5分钟摁一次空格）" Enabled="true">
         <Folders />
@@ -31,89 +31,163 @@
       <Folder Id="2b064229-a660-4820-85f7-83d174762da3" Name="团辅监控（需鲶鱼精）" Enabled="true">
         <Folders>
           <Folder Id="53292042-ecf7-418d-8d76-409d04226226" Name="小队列表初始化" Enabled="true">
-            <Folders />
+            <Folders>
+              <Folder Id="8942ee98-5f8c-417e-955f-d52137aef60a" Name="大区判定" Enabled="true">
+                <Folders>
+                  <Folder Id="0c6510f8-8726-4d9e-8c59-9fb575c3a4ca" Name="区服" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="false" Sequential="True" Name="primal" Id="6c054013-5155-40a5-a674-82a7215bd868" RegularExpression="^.{15}ChatLog 00:0038::ListUpadata:([^:]*?)(?:Behemoth|Excalibur|Exodus|Famfrit|Hyperion|Lamia|Leviathan|Ultros)?:([^:]*?)(?:Behemoth|Excalibur|Exodus|Famfrit|Hyperion|Lamia|Leviathan|Ultros)?:([^:]*?)(?:Behemoth|Excalibur|Exodus|Famfrit|Hyperion|Lamia|Leviathan|Ultros)?:([^:]*?)(?:Behemoth|Excalibur|Exodus|Famfrit|Hyperion|Lamia|Leviathan|Ultros)?:([^:]*?)(?:Behemoth|Excalibur|Exodus|Famfrit|Hyperion|Lamia|Leviathan|Ultros)?:([^:]*?)(?:Behemoth|Excalibur|Exodus|Famfrit|Hyperion|Lamia|Leviathan|Ultros)?:([^:]*?)(?:Behemoth|Excalibur|Exodus|Famfrit|Hyperion|Lamia|Leviathan|Ultros)?:([^:]*?)(?:Behemoth|Excalibur|Exodus|Famfrit|Hyperion|Lamia|Leviathan|Ultros)?:">
+                        <Actions>
+                          <Action OrderNumber="1" VariableOp="SetString" VariableName="name" VariableExpression="$1:$2:$3:$4:$5:$6:$7:$8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" ListVariableOp="Split" ListVariableName="name" ListVariableExpression=":" ListVariableTarget="playerlist" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="3" VariableName="name" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Asynchronous="False" Description="职业初始化" DescriptionOverride="True">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="5" ListVariableName="playerlist_job" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="6" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[1]}].job}" ListVariableIndex="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="7" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[2]}].job}" ListVariableIndex="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="8" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[3]}].job}" ListVariableIndex="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="9" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[4]}].job}" ListVariableIndex="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="10" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[5]}].job}" ListVariableIndex="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="11" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[6]}].job}" ListVariableIndex="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="12" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[7]}].job}" ListVariableIndex="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="13" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[8]}].job}" ListVariableIndex="8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="14" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="重置图片" DescriptionOverride="True">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="15" AuraOp="DeactivateAuraRegex" AuraName="团辅.{2}[1-8]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" Asynchronous="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="16" AuraOp="DeactivateAuraRegex" AuraName="团辅[1-8]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" Asynchronous="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="17" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="团辅.{2}[1-8]" TextAuraFontName="宋体" ActionType="TextAura" Asynchronous="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="18" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="f59883dc-6a0d-48bf-85d4-11222472651d" TriggerForce="regexp,refire,parent,active" ActionType="Trigger">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                      <Trigger Enabled="true" Sequential="True" Name="mana" Id="47f66de9-6b1f-47c4-ab2d-13b2b88671cb" RegularExpression="^.{15}ChatLog 00:0038::ListUpadata:(?&lt;list1&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list2&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list3&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list4&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list5&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list6&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list7&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list8&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:">
+                        <Actions>
+                          <Action OrderNumber="1" VariableOp="SetString" VariableName="name" VariableExpression="$1:$2:$3:$4:$5:$6:$7:$8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" ListVariableOp="Split" ListVariableName="name" ListVariableExpression=":" ListVariableTarget="playerlist" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="3" VariableName="name" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Asynchronous="False" Description="职业初始化" DescriptionOverride="True">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="5" ListVariableName="playerlist_job" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="6" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[1]}].job}" ListVariableIndex="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="7" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[2]}].job}" ListVariableIndex="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="8" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[3]}].job}" ListVariableIndex="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="9" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[4]}].job}" ListVariableIndex="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="10" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[5]}].job}" ListVariableIndex="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="11" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[6]}].job}" ListVariableIndex="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="12" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[7]}].job}" ListVariableIndex="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="13" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[8]}].job}" ListVariableIndex="8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="14" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="重置图片" DescriptionOverride="True">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="15" AuraOp="DeactivateAuraRegex" AuraName="团辅.{2}[1-8]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" Asynchronous="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="16" AuraOp="DeactivateAuraRegex" AuraName="团辅[1-8]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" Asynchronous="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="17" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="团辅.{2}[1-8]" TextAuraFontName="宋体" ActionType="TextAura" Asynchronous="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="18" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="f59883dc-6a0d-48bf-85d4-11222472651d" TriggerForce="regexp,refire,parent,active" ActionType="Trigger">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                </Folders>
+                <Triggers>
+                  <Trigger Enabled="true" Sequential="True" Name="你的大区" Id="df6c1935-e3a9-4cb4-8803-3e45481edc3c" RegularExpression="\[" PeriodRefire="Deny" RefirePeriodExpression="99999999">
+                    <Actions>
+                      <Action OrderNumber="1" FolderOp="DisableFolder" FolderId="0c6510f8-8726-4d9e-8c59-9fb575c3a4ca" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="6c054013-5155-40a5-a674-82a7215bd868" ActionType="Trigger" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" FolderOp="DisableFolder" FolderId="0c6510f8-8726-4d9e-8c59-9fb575c3a4ca" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="47f66de9-6b1f-47c4-ab2d-13b2b88671cb" ActionType="Trigger" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="6c054013-5155-40a5-a674-82a7215bd868" ActionType="Trigger" ExecutionDelayExpression="1000">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].worldname}" ExpressionTypeL="String" ExpressionR="Behemoth|Excalibur|Exodus|Famfrit|Hyperion|Lamia|Leviathan|Ultros" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="4" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="47f66de9-6b1f-47c4-ab2d-13b2b88671cb" ActionType="Trigger">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].worldname}" ExpressionTypeL="String" ExpressionR="Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
             <Triggers>
               <Trigger Enabled="true" Name="1写入列表" Id="ba4a827a-a206-4aab-87ff-ce7d268cfd25" RegularExpression="任务开始|の攻略を開始した|has begun" PeriodRefire="Deny" RefirePeriodExpression="100">
                 <Actions>
                   <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/e ListUpadata:&lt;1&gt;:&lt;2&gt;:&lt;3&gt;:&lt;4&gt;:&lt;5&gt;:&lt;6&gt;:&lt;7&gt;:&lt;8&gt;:" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="2000">
                     <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-              </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="2读取列表" Id="6c054013-5155-40a5-a674-82a7215bd868" RegularExpression="^.{15}ChatLog 00:0038::ListUpadata:(?&lt;list1&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list2&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list3&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list4&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list5&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list6&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list7&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:(?&lt;list8&gt;[^:]*?)(?:Anima|Asura|Belias|Chocobo|Hades|Ixion|Mandragora|Masamune|Pandaemonium|Shinryu|Titan)?:">
-                <Actions>
-                  <Action OrderNumber="1" VariableOp="SetString" VariableName="name" VariableExpression="$1:$2:$3:$4:$5:$6:$7:$8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="2" ListVariableOp="Split" ListVariableName="name" ListVariableExpression=":" ListVariableTarget="playerlist" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="3" VariableName="name" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Asynchronous="False" Description="职业初始化" DescriptionOverride="True">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="5" ListVariableName="playerlist_job" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="6" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[1]}].job}" ListVariableIndex="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="7" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[2]}].job}" ListVariableIndex="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="8" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[3]}].job}" ListVariableIndex="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="9" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[4]}].job}" ListVariableIndex="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="10" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[5]}].job}" ListVariableIndex="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="11" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[6]}].job}" ListVariableIndex="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="12" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[7]}].job}" ListVariableIndex="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="13" ListVariableOp="Insert" ListVariableName="playerlist_job" ListVariableExpression="${_ffxivparty[${lvar:playerlist[8]}].job}" ListVariableIndex="8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="14" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="重置图片" DescriptionOverride="True">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="15" AuraOp="DeactivateAuraRegex" AuraName="团辅.{2}[1-8]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" Asynchronous="False">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="16" AuraOp="DeactivateAuraRegex" AuraName="团辅[1-8]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" Asynchronous="False">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="17" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="团辅.{2}[1-8]" TextAuraFontName="宋体" ActionType="TextAura" Asynchronous="False">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="18" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="f59883dc-6a0d-48bf-85d4-11222472651d" TriggerForce="regexp,refire,parent,active" ActionType="Trigger">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />

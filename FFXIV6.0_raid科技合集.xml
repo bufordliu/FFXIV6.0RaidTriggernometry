@@ -390,7 +390,7 @@
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="993" Id="20e5fb1e-2bad-4347-a6ed-df41b09883a3" Name="极佐迪亚克1.0.7" Enabled="true">
+          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="993" Id="20e5fb1e-2bad-4347-a6ed-df41b09883a3" Name="极佐迪亚克1.1.0" Enabled="true">
             <Folders>
               <Folder Id="e0b3e2ad-3392-4d75-93ee-5fcd78a88ec4" Name="画图" Enabled="true">
                 <Folders>
@@ -491,7 +491,7 @@
                         <Triggers>
                           <Trigger Enabled="true" Name="中直线" Id="fb493394-90b5-45eb-872d-eca3a98a7dc7" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67E4:[^:]*:[^:]*:[^:]*:[^:]*:100.00:79.00:0.00:">
                             <Actions>
-                              <Action OrderNumber="1" AuraName="中直线" AuraImage="${var:本地包地址}图包\极佐迪亚克\直线.png" AuraXIniExpression="${tvar:设置[3][1]}+200/3" AuraYIniExpression="${tvar:设置[3][2]}" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                              <Action OrderNumber="1" AuraName="中直线" AuraImage="${var:本地包地址}图包\极佐迪亚克\直线.png" AuraXIniExpression="${tvar:设置[3][1]}+200/3" AuraYIniExpression="${tvar:设置[3][2]}" AuraWIniExpression="200" AuraHIniExpression="200" AuraOTickExpression="90/(5.7*1000)*${_sincems}+10" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
                                 <Condition Enabled="false" Grouping="Or" />
                               </Action>
                             </Actions>
@@ -499,7 +499,7 @@
                           </Trigger>
                           <Trigger Enabled="true" Name="左直线" Id="250b4545-f515-4321-8f9c-1cf5ba2bf6a4" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67E4:[^:]*:[^:]*:[^:]*:[^:]*:86.00:79.00:0.00:">
                             <Actions>
-                              <Action OrderNumber="1" AuraName="左直线" AuraImage="${var:本地包地址}图包\极佐迪亚克\直线.png" AuraXIniExpression="${tvar:设置[3][1]}" AuraYIniExpression="${tvar:设置[3][2]}" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                              <Action OrderNumber="1" AuraName="左直线" AuraImage="${var:本地包地址}图包\极佐迪亚克\直线.png" AuraXIniExpression="${tvar:设置[3][1]}" AuraYIniExpression="${tvar:设置[3][2]}" AuraWIniExpression="200" AuraHIniExpression="200" AuraOTickExpression="90/(5.7*1000)*${_sincems}+10" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
                                 <Condition Enabled="false" Grouping="Or" />
                               </Action>
                             </Actions>
@@ -507,7 +507,7 @@
                           </Trigger>
                           <Trigger Enabled="true" Name="右直线" Id="37bdd682-25da-439a-9685-317733dbc988" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67E4:[^:]*:[^:]*:[^:]*:[^:]*:114.00:79.00:0.00:">
                             <Actions>
-                              <Action OrderNumber="1" AuraName="右直线" AuraImage="${var:本地包地址}图包\极佐迪亚克\直线.png" AuraXIniExpression="${tvar:设置[3][1]}+200/3*2" AuraYIniExpression="${tvar:设置[3][2]}" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                              <Action OrderNumber="1" AuraName="右直线" AuraImage="${var:本地包地址}图包\极佐迪亚克\直线.png" AuraXIniExpression="${tvar:设置[3][1]}+200/3*2" AuraYIniExpression="${tvar:设置[3][2]}" AuraWIniExpression="200" AuraHIniExpression="200" AuraOTickExpression="90/(5.7*1000)*${_sincems}+10" AuraTTLTickExpression="5.7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
                                 <Condition Enabled="false" Grouping="Or" />
                               </Action>
                             </Actions>
@@ -581,7 +581,7 @@
                     <Triggers>
                       <Trigger Enabled="true" Name="左右拳" Id="006ff2da-d07e-4534-b001-b876c3bcf2bd" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67F1:">
                         <Actions>
-                          <Action OrderNumber="1" AuraName="左右拳" AuraImage="${var:本地包地址}图包\极佐迪亚克\左右拳.png" AuraXIniExpression="${tvar:设置[3][1]}" AuraYIniExpression="${tvar:设置[3][2]}" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="6.6*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                          <Action OrderNumber="1" AuraName="左右拳" AuraImage="${var:本地包地址}图包\极佐迪亚克\左右拳.png" AuraXIniExpression="${tvar:设置[3][1]}" AuraYIniExpression="${tvar:设置[3][2]}" AuraWIniExpression="200" AuraHIniExpression="200" AuraOTickExpression="90/(6.6*1000)*${_sincems}+10" AuraTTLTickExpression="6.6*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
@@ -589,7 +589,7 @@
                       </Trigger>
                       <Trigger Enabled="true" Name="右冲拳" Id="f020628e-505d-4bdb-9bf5-0b7968cc065f" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67ED:">
                         <Actions>
-                          <Action OrderNumber="1" AuraName="右冲拳" AuraImage="${var:本地包地址}图包\极佐迪亚克\右冲拳.png" AuraXIniExpression="${tvar:设置[3][1]}" AuraYIniExpression="${tvar:设置[3][2]}" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                          <Action OrderNumber="1" AuraName="右冲拳" AuraImage="${var:本地包地址}图包\极佐迪亚克\右冲拳.png" AuraXIniExpression="${tvar:设置[3][1]}" AuraYIniExpression="${tvar:设置[3][2]}" AuraWIniExpression="200" AuraHIniExpression="200" AuraOTickExpression="90/(7*1000)*${_sincems}+10" AuraTTLTickExpression="7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
@@ -597,7 +597,7 @@
                       </Trigger>
                       <Trigger Enabled="true" Name="左冲拳" Id="f146bac4-f8d3-4584-bd1d-1d40a7d4e668" RegularExpression="^.{15}StartsCasting 14:[0-9A-F]{8}:[^:]*:67EC:">
                         <Actions>
-                          <Action OrderNumber="1" AuraName="左冲拳" AuraImage="${var:本地包地址}图包\极佐迪亚克\左冲拳.png" AuraXIniExpression="${tvar:设置[3][1]}" AuraYIniExpression="${tvar:设置[3][2]}" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                          <Action OrderNumber="1" AuraName="左冲拳" AuraImage="${var:本地包地址}图包\极佐迪亚克\左冲拳.png" AuraXIniExpression="${tvar:设置[3][1]}" AuraYIniExpression="${tvar:设置[3][2]}" AuraWIniExpression="200" AuraHIniExpression="200" AuraOTickExpression="90/(7*1000)*${_sincems}+10" AuraTTLTickExpression="7*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
@@ -675,7 +675,7 @@
                             <Triggers>
                               <Trigger Enabled="true" Name="右上月环" Id="e7617bb0-0cf0-41cd-803a-f5d166ec3d09" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00200010:00000016:00000000:">
                                 <Actions>
-                                  <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="右上月环" AuraImage="${var:本地包地址}图包\极佐迪亚克\月环.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="${tvar:设置[3][1]}+${var:右上x}" AuraYTickExpression="${tvar:设置[3][2]}+${var:右上y}" AuraTTLTickExpression="${var:小怪时间}*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                                  <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="右上月环" AuraImage="${var:本地包地址}图包\极佐迪亚克\月环.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="${tvar:设置[3][1]}+${var:右上x}" AuraYTickExpression="${tvar:设置[3][2]}+${var:右上y}" AuraTTLTickExpression="${var:小怪时间}*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" ExecutionDelayExpression="20">
                                     <Condition Enabled="false" Grouping="Or" />
                                   </Action>
                                 </Actions>
@@ -683,7 +683,7 @@
                               </Trigger>
                               <Trigger Enabled="true" Name="右下月环" Id="d7976d53-3f32-483b-96a0-278339c4092d" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00200010:00000018:00000000:">
                                 <Actions>
-                                  <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="右下月环" AuraImage="${var:本地包地址}图包\极佐迪亚克\月环.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="${tvar:设置[3][1]}+${var:右下x}" AuraYTickExpression="${tvar:设置[3][2]}+${var:右下y}" AuraTTLTickExpression="${var:小怪时间}*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                                  <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="右下月环" AuraImage="${var:本地包地址}图包\极佐迪亚克\月环.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="${tvar:设置[3][1]}+${var:右下x}" AuraYTickExpression="${tvar:设置[3][2]}+${var:右下y}" AuraTTLTickExpression="${var:小怪时间}*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" ExecutionDelayExpression="20">
                                     <Condition Enabled="false" Grouping="Or" />
                                   </Action>
                                 </Actions>
@@ -691,7 +691,7 @@
                               </Trigger>
                               <Trigger Enabled="true" Name="左上月环" Id="d7038f09-14a6-41fe-9b40-2c7c486e8c52" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00200010:00000015:00000000:">
                                 <Actions>
-                                  <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="左上月环" AuraImage="${var:本地包地址}图包\极佐迪亚克\月环.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="${tvar:设置[3][1]}+${var:左上x}" AuraYTickExpression="${tvar:设置[3][2]}+${var:左上y}" AuraTTLTickExpression="${var:小怪时间}*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                                  <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="左上月环" AuraImage="${var:本地包地址}图包\极佐迪亚克\月环.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="${tvar:设置[3][1]}+${var:左上x}" AuraYTickExpression="${tvar:设置[3][2]}+${var:左上y}" AuraTTLTickExpression="${var:小怪时间}*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" ExecutionDelayExpression="20">
                                     <Condition Enabled="false" Grouping="Or" />
                                   </Action>
                                 </Actions>
@@ -699,7 +699,7 @@
                               </Trigger>
                               <Trigger Enabled="true" Name="左下月环" Id="b02e2429-5f6b-47fa-862b-f7cfc10bb253" RegularExpression="^.{15}ChatLog 00:0:103:[0-9A-F]{8}:[0-9A-F]{8}:00200010:00000017:00000000:">
                                 <Actions>
-                                  <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="左下月环" AuraImage="${var:本地包地址}图包\极佐迪亚克\月环.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="${tvar:设置[3][1]}+${var:左下x}" AuraYTickExpression="${tvar:设置[3][2]}+${var:左下y}" AuraTTLTickExpression="${var:小怪时间}*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                                  <Action OrderNumber="1" AuraImageMode="CenterImage" AuraName="左下月环" AuraImage="${var:本地包地址}图包\极佐迪亚克\月环.png" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraXTickExpression="${tvar:设置[3][1]}+${var:左下x}" AuraYTickExpression="${tvar:设置[3][2]}+${var:左下y}" AuraTTLTickExpression="${var:小怪时间}*1000-${_sincems}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" ExecutionDelayExpression="20">
                                     <Condition Enabled="false" Grouping="Or" />
                                   </Action>
                                 </Actions>
@@ -834,7 +834,7 @@
                               <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="右下y" VariableExpression="+50" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                                 <Condition Enabled="false" Grouping="Or" />
                               </Action>
-                              <Action OrderNumber="9" VariableOp="SetNumeric" VariableName="小怪时间" VariableExpression="10" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                              <Action OrderNumber="9" VariableOp="SetNumeric" VariableName="小怪时间" VariableExpression="11" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                                 <Condition Enabled="false" Grouping="Or" />
                               </Action>
                               <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="蛇时间" VariableExpression="10" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
@@ -952,18 +952,18 @@
                           <Action OrderNumber="1" VariableOp="SetString" VariableName="cishu" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="2" VariableOp="SetString" VariableName="xingtu" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                          <Action OrderNumber="2" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="79120084-94ce-4ce9-a87b-cfe7a20e682e" ActionType="Trigger">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="3" VariableName="xingtu" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="20000">
+                          <Action OrderNumber="3" VariableName="xingtu" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="79120084-94ce-4ce9-a87b-cfe7a20e682e" ActionType="Trigger" ExecutionDelayExpression="16000">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
-                      <Trigger Enabled="true" Sequential="True" Name="星图获取" Id="79120084-94ce-4ce9-a87b-cfe7a20e682e" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0:103(?:[^:]*:){3}(?&lt;count&gt;(?:[^:]*)):">
+                      <Trigger Enabled="false" Sequential="True" Name="星图获取" Id="79120084-94ce-4ce9-a87b-cfe7a20e682e" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0:103(?:[^:]*:){3}(?&lt;count&gt;(?:[^:]*)):">
                         <Actions>
-                          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="cishu" VariableExpression="${var:cishu}+1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="cishu" VariableExpression="${var:cishu}+1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                           <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="星图" ListVariableExpression="A→" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" ExecutionDelayExpression="10" Description="D点第一次" DescriptionOverride="True">
@@ -1081,9 +1081,7 @@
                             </Condition>
                           </Action>
                         </Actions>
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${var:xingtu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                        </Condition>
+                        <Condition Enabled="false" Grouping="Or" />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -1091,7 +1089,7 @@
                 <Triggers>
                   <Trigger Enabled="true" Name="底图" Id="66075d88-605f-4825-b0c2-561f84b0001b" RegularExpression="">
                     <Actions>
-                      <Action OrderNumber="1" AuraName="背景" AuraImage="${var:本地包地址}图包\通用\场地-方块.png" AuraXIniExpression="${tvar:设置[3][1]}" AuraYIniExpression="${tvar:设置[3][2]}" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
+                      <Action OrderNumber="1" AuraName="背景" AuraImage="${var:本地包地址}图包\通用\场地-方块.png" AuraXIniExpression="${tvar:设置[3][1]}-50" AuraYIniExpression="${tvar:设置[3][2]}-50" AuraWIniExpression="300" AuraHIniExpression="300" AuraOIniExpression="100" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
@@ -1197,13 +1195,13 @@
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="极佐迪亚克开始" Id="920ae96e-d8cb-4f4e-ab99-f98c08989275" RegularExpression="^.{15}AddCombatant 03:[0-9A-F]{8}:(佐迪亚克|Zodiark|ゾディアーク):00:5A:" PeriodRefire="Deny" RefirePeriodExpression="5*1000">
                 <Actions>
-                  <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="7636fc7c-274d-4bd7-9e97-b67ed427f76f" TriggerForce="true" ActionType="Trigger">
+                  <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="d0f7ac70-4f12-4f61-81a5-bc4089e64e26" TriggerForce="true" ActionType="Trigger" ExecutionDelayExpression="10">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="d0f7ac70-4f12-4f61-81a5-bc4089e64e26" TriggerForce="true" ActionType="Trigger" ExecutionDelayExpression="10">
+                  <Action OrderNumber="2" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="66075d88-605f-4825-b0c2-561f84b0001b" TriggerForce="true" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="66075d88-605f-4825-b0c2-561f84b0001b" TriggerForce="true" ActionType="Trigger">
+                  <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="79120084-94ce-4ce9-a87b-cfe7a20e682e" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -1227,7 +1225,7 @@
           <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="bb0e23d9-7353-4038-8bbd-9e11cfdb9b0a" TriggerForce="regexp,refire,parent,active" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="4" AuraName="测试图片" AuraImage="${var:本地包地址}图包\通用\场地-方块.png" AuraXIniExpression="${tvar:设置[3][1]}" AuraYIniExpression="${tvar:设置[3][2]}" AuraWIniExpression="200" AuraHIniExpression="200" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" ExecutionDelayExpression="50" Asynchronous="False">
+          <Action OrderNumber="4" AuraName="测试图片" AuraImage="${var:本地包地址}图包\通用\场地-方块.png" AuraXIniExpression="${tvar:设置[3][1]}-50" AuraYIniExpression="${tvar:设置[3][2]}-50" AuraWIniExpression="300" AuraHIniExpression="300" AuraOIniExpression="100" AuraTTLTickExpression="15-${_since}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Aura" ExecutionDelayExpression="50" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="5" TextAuraEffect="Bold" TextAuraFontSize="14.25" TextAuraForeground="#FF4DA6" TextAuraName="测试文本" TextAuraExpression="当前左上角坐标:(${numeric:round(${tvar:设置[3][1]},1)},${numeric:round(${tvar:设置[3][2]},1)})               ${numeric:15-${_since}}秒后关闭本窗口" TextAuraXIniExpression="${tvar:设置[3][1]}" TextAuraYIniExpression="${tvar:设置[3][2]}" TextAuraWIniExpression="200" TextAuraHIniExpression="200" TextAuraOIniExpression="100" TextAuraTTLTickExpression="15-${_since}" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" ActionType="TextAura">
